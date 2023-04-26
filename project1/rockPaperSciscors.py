@@ -51,7 +51,7 @@ def main():
             if userChoice and (userChoice < 1 or userChoice > 3):
                 print("Invalid Choice!")
                 userChoice = None
-            elif !userChoice:
+            elif not userChoice:
                 print("Invalid Choice!")
         print(f"You picked {options[userChoice]}.")
         cpuChoice = random.randint(1, 3)
