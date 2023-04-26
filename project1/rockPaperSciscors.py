@@ -12,10 +12,10 @@ def main():
             rounds = int(input("How many rounds do you want to play?"))
         except ValueError:
             print("Invalid Number!")
-        if rounds < 1:
+        if rounds and rounds < 1:
             print("Invalid Number!")
             rounds = None
-        elif rounds > 9:
+        elif rounds and rounds > 9:
             print("Too many rounds!")
             rounds = None
 
@@ -47,9 +47,12 @@ def main():
                     userChoice = 3
                 else:
                     userChoice = None
-            if userChoice < 1 or userChoice > 3:
+                    print("Invalid Choice!")
+            if userChoice and (userChoice < 1 or userChoice > 3):
                 print("Invalid Choice!")
                 userChoice = None
+            elif !userChoice:
+                print("Invalid Choice!")
         print(f"You picked {options[userChoice]}.")
         cpuChoice = random.randint(1, 3)
         print(f"The computer picked {options[cpuChoice]}.")
