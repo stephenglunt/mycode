@@ -67,7 +67,7 @@ def main():
     print(f"End of Game!\nFinal Scores:\nPlayer: {userScore} || CPU: {cpuScore}")
     if userScore > cpuScore:
         print("You won!")
-    elif userScore < cupScore:
+    elif userScore < cpuScore:
         print("You lost.")
     else:
         print("It's a tie!")
