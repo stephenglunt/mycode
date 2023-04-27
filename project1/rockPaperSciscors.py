@@ -9,7 +9,7 @@ def main():
     rounds = None
     while rounds is None:
         try:
-            rounds = int(input("How many rounds do you want to play?"))
+            rounds = int(input("How many rounds do you want to play?\n> "))
         except ValueError:
             print("Invalid Number!")
         if rounds and rounds < 1:
