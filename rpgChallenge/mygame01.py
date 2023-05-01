@@ -125,6 +125,7 @@ while True:
         # 1. if the current room contains an npc
         # 2. if the npc matches the npc that the player wishes to fight
         if "npc" in rooms[currentRoom] and move[1] in rooms[currentRoom]['npc']:
-            print('You are unarmed. How will you attack?\n
+            print('You are unarmed. How will you attack?\n(P)unch\n(K)ick\n')
+            fightOption = input('>')
 
 
