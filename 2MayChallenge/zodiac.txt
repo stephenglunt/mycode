@@ -1,0 +1,14 @@
+{
+    0, " your zodiac sign is Monkey, you are sharp, smart, curious, and mischievious.",
+    1, " your zodiac sign is Rooster, you are hardworking, resourceful, courageous, and talented.",
+    2, " your zodiac sign is Dog, you are loyal, honest, cautious, and kind.",
+    3, " your zodiac sign is Pig, you are a symbol of wealth, honesty, and practicality.",
+    4, " your zodiac sign is Rabbit, you are vigilant, witty, quick-minded, and ingenious.",
+    5, " your zodiac sign is Rat, you are artistic, sociable, industrious, charming, and intelligent.",
+    6, " your zodiac sign is Tiger, you are courageous, enthusiastic, confident, charismatic, and a leader.",
+    7, " your zodiac sign is Ox, you are strong, thorough, determined, loyal, and reliable.",
+    8, " your zodiac sign is Dragon, you are talented, powerful, lucky, and successfull.",
+    9, " your zodiac sign is Snake, you are wise, like to work alone, and determined.",
+    10, " your zodiac sign is Horse, you are animated, active, and energetic.",
+    11, " your zodiac sign is Sheep, you are creative, resilient, gentle, mild-mannered, and shy."
+}
