@@ -42,7 +42,7 @@ def bookchoice():
     # send the title to a separate function which will find and return a match (if one exists)
     quote= quote_from_title(title)
 
-    return quote
+    return render_template("newPage.html.j2", data=quote)
 
 @app.route("/<derpnum>")
 def redirectexample(derpnum):
