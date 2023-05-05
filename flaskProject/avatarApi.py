@@ -13,7 +13,11 @@ with open("avatars.json", "r") as file:
 app = Flask(__name__)
 
 def get_random_character():
-    return random.choice(data)
+#    return random.choice(data)
+    mylist = []
+    for i in range(4):
+        mylist.append(random.choice(data))
+    return render_template("index.html", charList=mylist)
 
 @app.route('/')
 def landingPage():
