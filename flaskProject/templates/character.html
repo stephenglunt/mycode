@@ -9,17 +9,37 @@
    </head>                     
    <body>                      
        <div class="container"> 
-           <h1 class="text-center m-5">Avatar: The Last Airbender</h1>
+           <a href="/"><h1 class="text-center m-5">Avatar: The Last Airbender</h1></a>
            <div class="row">   
                    <figure class="rounded p-3 bg-dark">       
                    <img src="{{ character.photoUrl }}" class="img-fluid rounded bg-dark" alt="{{ character.name }}">
                    <figcaption class="text-white">
                        <p class="h1">{{ character.name }}</p>
-                       <p>Allies:</p>
-                       {% for ally in character.allies %}
-                       <p>{{ally}}</p>
-                       {% endfor %}
-
+                       <dl class="row pl-3 mb-0">
+                           <dt style="height: 30px">
+                               {{"Allies:" if character.allies|length > 1 else "Ally:" }}</dt>
+                           <dd>
+                               {% for ally in character.allies %}
+                               <p class="pl-1">{{ally}}</p>
+                               {% endfor %}
+                           </dd>
+                       </dl>
+                       {% if character.enemies|length > 0 %}
+                       <dl class="row pl-3">
+                           <dt>{{"Enemies:" if character.enemies|length > 1 else "Enemy:"}}</dt>
+                           <dd>
+                               {% for enemy in character.enemies %}
+                               <p class="pl-1">{{ enemy }}</p>
+                               {% endfor %}
+                           </dd>
+                       </dl>
+                       {% endif %}
+                       <div class="row">
+                           {% for image in symbol_imgs %}
+                           <div style="width: 80px; height: 50px; overflow: hidden; position: relative;">
+                           <img src="{{image}}" class="pl-3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; max-height: 100%;">
+                           {% endfor %}
+                       </div>
                    </figcaption>
                    </figure>   
            </div>              
