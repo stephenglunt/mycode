@@ -14,10 +14,10 @@
                 {% for character in charList %}
                 <div class="col-md-3">
                     <figure class="rounded p-3 bg-dark">
-                    <a href="/character/{character.id}">
+                        <a href="/character/{{character._id}}">
                     <img src="{{ character.photoUrl }}" class="img-fluid rounded bg-dark" alt="{{ character.name }}">
                     </a>
-                    <figcaption class="text-white">{{character.id}}{{ character.name }}</figcaption>
+                    <figcaption class="text-white">{{ character.name }}</figcaption>
                     </figure>
                 </div>
                 {% endfor %}

@@ -12,23 +12,38 @@ with open("avatars.json", "r") as file:
 
 app = Flask(__name__)
 
+@app.route('/random')
 def get_random_character():
 #    return random.choice(data)
-    mylist = []
-    for i in range(4):
-        mylist.append(random.choice(data))
-    return render_template("index.html", charList=mylist)
+    return random.choice(data)
+
+@app.route('/character/<_id>')
+def characterPage(_id):
+    for character in data:
+        if character['_id'] == _id:
+            return render_template('character.html', character=character)
+
+    redirect('/')
 
 @app.route('/')
 def landingPage():
-    return get_random_character()
+    mylist = []
+    for i in range(4):
+        mylist.append(get_random_character())
+
+
+
+    return render_template("index.html", charList=mylist)
 
 @app.route('/affiliation=<friends>')
 def affiliations(friends):
     affiliates = []
     for character in data:
-        if character['affiliation'].contains(friends):
-            affiliates.append(character)
+        if 'affiliation' in character:
+            if friends in character['affiliation']:
+                affiliates.append(character)
+
+    
 
     return affiliates
 
